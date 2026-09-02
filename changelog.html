@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Changelog</title>
+<style>
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 40px 16px;
+    background: #f3f4f6;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+  }
+
+  .card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    max-width: 560px;
+    width: 100%;
+    padding: 40px 32px 36px;
+  }
+
+  .card__header {
+    text-align: center;
+    margin-bottom: 36px;
+  }
+
+  .card__title {
+    margin: 0 0 8px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #111827;
+  }
+
+  .card__subtitle {
+    margin: 0;
+    font-size: 14px;
+    color: #9ca3af;
+  }
+
+  .timeline {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 130px;
+    top: 6px;
+    bottom: 6px;
+    width: 1px;
+    background: #e5e7eb;
+  }
+
+  .timeline__item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 110px 20px 1fr;
+    column-gap: 12px;
+    align-items: start;
+    padding: 14px 0;
+  }
+
+  .timeline__date {
+    text-align: right;
+    font-size: 13px;
+    color: #9ca3af;
+    padding-top: 1px;
+    white-space: nowrap;
+  }
+
+  .timeline__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #111827;
+    justify-self: center;
+    margin-top: 4px;
+    z-index: 1;
+  }
+
+  .timeline__label {
+    font-size: 14px;
+    color: #111827;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  .card__footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+  }
+
+  .btn {
+    appearance: none;
+    border: none;
+    background: #111827;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.15s ease;
+  }
+
+  .btn:hover {
+    background: #1f2937;
+  }
+
+  .btn:focus-visible {
+    outline: 2px solid #111827;
+    outline-offset: 2px;
+  }
+
+  @media (max-width: 480px) {
+    .timeline::before { left: 92px; }
+    .timeline__item { grid-template-columns: 72px 20px 1fr; }
+    .card { padding: 32px 20px 28px; }
+    .card__title { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="card__header">
+    <h1 class="card__title">Changelog</h1>
+    <p class="card__subtitle">Here's everything we have shipped in the past few days</p>
+  </div>
+
+  <ul class="timeline">
+    <li class="timeline__item">
+      <span class="timeline__date">September 3, 2024</span>
+      <span class="timeline__dot"></span>
+      <span class="timeline__label">Announcing Projects on Frontend Roadmap</span>
+    </li>
+    <li class="timeline__item">
+      <span class="timeline__date">August 28, 2024</span>
+      <span class="timeline__dot"></span>
+      <span class="timeline__label">Build your learning habits with learning streaks</span>
+    </li>
+    <li class="timeline__item">
+      <span class="timeline__date">August 25, 2024</span>
+      <span class="timeline__dot"></span>
+      <span class="timeline__label">Git and GitHub Roadmap</span>
+    </li>
+    <li class="timeline__item">
+      <span class="timeline__date">August 22, 2024</span>
+      <span class="timeline__dot"></span>
+      <span class="timeline__label">Submit your project solution and get feedback</span>
+    </li>
+    <li class="timeline__item">
+      <span class="timeline__date">August 15, 2024</span>
+      <span class="timeline__dot"></span>
+      <span class="timeline__label">Backend Project Ideas</span>
+    </li>
+    <li class="timeline__item">
+      <span class="timeline__date">August 10, 2024</span>
+      <span class="timeline__dot"></span>
+      <span class="timeline__label">Redis roadmap</span>
+    </li>
+    <li class="timeline__item">
+      <span class="timeline__date">August 1, 2024</span>
+      <span class="timeline__dot"></span>
+      <span class="timeline__label">Changelog page to help you stay in the loop</span>
+    </li>
+  </ul>
+
+  <div class="card__footer">
+    <button class="btn">Visit Complete Changelog</button>
+  </div>
+</div>
+
+</body>
+</html>
